@@ -25,7 +25,7 @@ jobs:
     # Build the page
     - name: Build the page
       run: |
-        jupyter nbconvert -y --output-dir=./_build/html --to html *.ipynb
+        jupyter nbconvert -y --output-dir=./_build/html --to html --template=tpl --theme=dark *.ipynb
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.5.9
